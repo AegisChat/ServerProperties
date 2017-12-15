@@ -1,3 +1,4 @@
+package pair;
 
 public class UserScorePair<UserAccountInterface, Integer> extends Pair{
 	private UserAccountInterface user;

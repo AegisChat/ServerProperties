@@ -1,3 +1,4 @@
+package tag;
 
 public class Tag implements TagInterface {
 	private String tag;

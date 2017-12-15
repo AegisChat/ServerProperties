@@ -1,3 +1,4 @@
+package tag;
 
 public interface TagInterface {
 	abstract public String getTag();

@@ -1,3 +1,5 @@
+package userAccount;
+import id.*;
 
 public interface UserAccountInterface {
 	abstract public UserAccountInterface clone();
