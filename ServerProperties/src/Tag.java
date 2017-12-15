@@ -18,4 +18,11 @@ public class Tag implements TagInterface {
 			return false;
 		}
 	}
+	
+	@Override
+	public TagInterface clone() {
+		Tag t = new Tag();
+		t.setTag(this.getTag());
+		return t;
+	}
 }

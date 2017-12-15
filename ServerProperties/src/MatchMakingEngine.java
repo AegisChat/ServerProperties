@@ -14,4 +14,9 @@ public class MatchMakingEngine implements MatchMakingInterface{
 		return null;
 	}
 	
+	@Override
+	public MatchMakingInterface clone() {
+		MatchMakingEngine m = new MatchMakingEngine();
+		return m;
+	}
 }

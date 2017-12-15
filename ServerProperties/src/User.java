@@ -8,6 +8,13 @@ public class User implements UserAccountInterface{
 	private String Location;
 	private IDInterface ID;
 	
+	@Override
+	public UserAccountInterface clone() {
+		UserAccountInterface s = new User();
+		s.setID((IDInterface)ID.clone());
+		return s;
+	}
+	
 	public String getLocation() {
 		return Location;
 	}

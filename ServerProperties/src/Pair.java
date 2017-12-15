@@ -1,3 +1,4 @@
 
-public interface Pair<L, R> {
+public abstract class Pair<L,R> {
+	
 }
