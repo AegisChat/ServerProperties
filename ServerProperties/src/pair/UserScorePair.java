@@ -1,6 +1,7 @@
 package pair;
+import userAccount.*;
 
-public class UserScorePair<UserAccountInterface, Integer> extends Pair{
+public class UserScorePair extends Pair{
 	private UserAccountInterface user;
 	private int score;
 	

@@ -1,5 +1,5 @@
 package pair;
 
-public abstract class Pair<L,R> {
+public abstract class Pair {
 	
 }
