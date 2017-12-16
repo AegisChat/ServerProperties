@@ -36,6 +36,11 @@ public final class User implements UserAccountInterface{
 		return (ArrayList<Tag>)tags.clone();
 	}
 	
+	@Override
+	public boolean equals(UserAccountInterface userAccount) {
+		return this.ID.equals(userAccount.getID());
+	}
+	
 	
 	
 	@Override
@@ -92,10 +97,5 @@ public final class User implements UserAccountInterface{
 	}
 	public void setID(IDInterface iD) {
 		ID = iD;
-	}
-
-	@Override
-	public boolean equals(UserAccountInterface userAccount) {
-		return this.ID.equals(userAccount.getID());
 	}
 }

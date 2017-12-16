@@ -1,7 +1,9 @@
 package pair;
 import userAccount.*;
 
-public class UserScorePair extends Pair{
+//ABSTRACT: The Score is representative to the similarities in the tag similar to the "original User"
+
+public final class UserScorePair extends Pair{
 	private UserAccountInterface user;
 	private int score;
 	
@@ -10,7 +12,12 @@ public class UserScorePair extends Pair{
 		score = i;
 	}
 	
-	public void increaseScore(){
+	public int UserCompareScore() {
+		
+		return score;
+	}
+	
+	protected void increaseScore(){
 		score++;
 	}
 	
@@ -29,4 +36,5 @@ public class UserScorePair extends Pair{
 	public void setScore(int score) {
 		this.score = score;
 	}
+
 }
