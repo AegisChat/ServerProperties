@@ -96,7 +96,6 @@ public final class User implements UserAccountInterface{
 
 	@Override
 	public boolean equals(UserAccountInterface userAccount) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.ID.equals(userAccount.getID());
 	}
 }
