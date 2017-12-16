@@ -19,9 +19,9 @@ public class MatchMakingEngine implements MatchMakingInterface{
 		
 //		for(int i = 0; i < pairs.size(); i++) {
 //			for(int j = 0; j < pairs.size(); j++) {
-////				if(pairs.get(i).getUser().equals(obj)) {
-////					
-////				}
+//				if(pairs.get(i).getUser().equals(obj)) {
+//					
+//				}
 //			}
 //		}
 		
