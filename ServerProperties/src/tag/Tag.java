@@ -1,6 +1,6 @@
 package tag;
 
-public class Tag implements TagInterface {
+public final class Tag implements TagInterface {
 	private String tag;
 
 	public String getTag() {

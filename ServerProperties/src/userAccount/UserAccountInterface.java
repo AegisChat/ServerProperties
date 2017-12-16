@@ -1,5 +1,8 @@
 package userAccount;
+import java.util.ArrayList;
+
 import id.*;
+import tag.Tag;
 
 public interface UserAccountInterface {
 	abstract public UserAccountInterface clone();
@@ -19,4 +22,9 @@ public interface UserAccountInterface {
 	abstract public void setDate_of_birth(String date_of_birth);
 	abstract public IDInterface getID();
 	abstract public void setID(IDInterface iD);
+	abstract public void addTag(Tag t);
+	abstract public void removeTag(Tag t);
+	abstract public void importTags(ArrayList<Tag> t);
+	abstract public ArrayList<Tag> exportTag();
+	abstract public boolean equals(UserAccountInterface userAccount);
 }

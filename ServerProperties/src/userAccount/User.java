@@ -1,7 +1,11 @@
 package userAccount;
-import id.*;
 
-public class User implements UserAccountInterface{
+import java.util.List;
+import java.util.ArrayList;
+import id.*;
+import tag.*;
+
+public final class User implements UserAccountInterface{
 	private String FirstName;
 	private String LastName;
 	private String emailAddress;
@@ -9,11 +13,34 @@ public class User implements UserAccountInterface{
 	private String gender;
 	private String date_of_birth;
 	private String Location;
+	private ArrayList<Tag> tags;
 	private IDInterface ID;
+	
+	public User (ArrayList<Tag> t){
+		tags = t;
+	}
+	
+	public void addTag(Tag t) {
+		tags.add(t);
+	}
+	
+	public void removeTag(Tag t) {
+		tags.remove(t);
+	}
+	
+	public void importTags(ArrayList<Tag> t) {
+		tags = (ArrayList<Tag>)t.clone();
+	}
+	
+	public ArrayList<Tag> exportTag(){
+		return (ArrayList<Tag>)tags.clone();
+	}
+	
+	
 	
 	@Override
 	public UserAccountInterface clone() {
-		UserAccountInterface s = new User();
+		UserAccountInterface s = new User(null);
 		s.setID((IDInterface)ID.clone());
 		return s;
 	}
@@ -65,5 +92,11 @@ public class User implements UserAccountInterface{
 	}
 	public void setID(IDInterface iD) {
 		ID = iD;
+	}
+
+	@Override
+	public boolean equals(UserAccountInterface userAccount) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
