@@ -13,6 +13,7 @@ public final class User implements UserAccountInterface{
 	private String gender;
 	private String date_of_birth;
 	private String Location;
+	private String Status;
 	private ArrayList<Tag> tags;
 	private IDInterface ID;
 	
@@ -28,6 +29,14 @@ public final class User implements UserAccountInterface{
 		tags.remove(t);
 	}
 	
+	public String getStatus() {
+		return Status;
+	}
+
+	public void setStatus(String status) {
+		Status = status;
+	}
+
 	public void importTags(ArrayList<Tag> t) {
 		tags = (ArrayList<Tag>)t.clone();
 	}
@@ -40,8 +49,6 @@ public final class User implements UserAccountInterface{
 	public boolean equals(UserAccountInterface userAccount) {
 		return this.ID.equals(userAccount.getID());
 	}
-	
-	
 	
 	@Override
 	public UserAccountInterface clone() {

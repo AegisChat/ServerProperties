@@ -12,12 +12,11 @@ public class MatchMakingEngine implements MatchMakingInterface{
 	public UserAccountInterface matchMake(UserAccountInterface user, List<UserAccountInterface> ListOfUser) {
 		Iterator itr;
 		itr = ListOfUser.iterator();
-		List<UserScorePair> pairs = new ArrayList<UserScorePair>();
+		List<UserScorePair> pairs = new ArrayList<UserScorePair>();		
+		while(itr.hasNext()) {
+			pairs.add(new UserScorePair((UserAccountInterface)itr.next(), new Integer(0)));
+		}
 		
-		
-//		while(itr.hasNext()) {
-//			pairs.add(new UserScorePair((UserAccountInterface)itr.next(), new Integer(0)));
-//		}
 //		for(int i = 0; i < pairs.size(); i++) {
 //			for(int j = 0; j < pairs.size(); j++) {
 ////				if(pairs.get(i).getUser().equals(obj)) {

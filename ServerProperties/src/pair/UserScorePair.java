@@ -12,11 +12,6 @@ public final class UserScorePair extends Pair{
 		score = i;
 	}
 	
-	public int UserCompareScore() {
-		
-		return score;
-	}
-	
 	protected void increaseScore(){
 		score++;
 	}
